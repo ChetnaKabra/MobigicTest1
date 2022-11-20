@@ -1,0 +1,6 @@
+/ Database (MySQL)
+create database miniapp;
+use miniapp;
+create table user(username varchar(100) primary key,password varchar(100));
+create table files(username varchar(100),file_no int auto_increment primary key, filename varchar(100),filetype varchar(100),lastmodified varchar(100), FOREIGN KEY(username) references user(username));
+alter table files auto_increment=100000;
